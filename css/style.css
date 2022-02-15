@@ -55,6 +55,11 @@ header {
   margin: 0;
   /*background-color: rgba(255, 255, 255, 50%);*/
   overflow: hidden;
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
 .encabezado__nav {
@@ -67,6 +72,11 @@ header {
 .encabezado__imagen {
   display: flex;
   align-items: center;
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
 .encabezado__titulo {
@@ -113,9 +123,16 @@ header {
   text-transform: uppercase;
   border-radius: 5px;
   border: solid 1px black;
+  transition: all 500ms; /*SE AGREGA TRANSICION A LA TRANSFORMACION DE LOS LI DEL MENU*/
+
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
-.encabezado li:hover {
+.encabezado__nav li:hover {
   background-color: black;
   width: 105px;
   height: 25px;
@@ -128,7 +145,7 @@ header {
   border-radius: 5px;
   border: solid 1px white;
 
-  transform: scale(1.1, 1.1); /*SE AGREGA TRANSFORMACION A LOS LI DEL MENU*/
+  transform: scale(1.05, 1.05); /*SE AGREGA TRANSFORMACION A LOS LI DEL MENU*/
 }
 
 .encabezado__menu {
@@ -147,6 +164,12 @@ header {
   display: inline-block;
   position: relative;
   padding-bottom: 50px;
+
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
 .principal__seccion {
@@ -204,6 +227,12 @@ header {
   height: auto;
   display: grid;
   min-height: 100px;
+
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
 .principal__reel p {
@@ -230,6 +259,12 @@ header {
   justify-content: space-between;
   align-items: center;
   /*position: relative;*/
+
+  /*ANIMACION DE APARECER*/
+
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
 }
 
 .pie__links {
@@ -284,6 +319,34 @@ a:hover {
       "pie      pie";
   }
 
+  .encabezado__titulo {
+    background-color: rgba(255, 255, 255, 80%);
+    display: none;
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    /*bottom: 50px;*/
+  }
+
+  .encabezado__titulo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /*display: inline-block;*/
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    /*bottom: 50px;*/
+  }
+
+  .encabezado__titulo a {
+    line-height: 50px;
+  }
+
   .encabezado__menu {
     list-style: none;
     display: flex;
@@ -304,6 +367,34 @@ a:hover {
       "contenido "
       "lateral"
       "pie";
+  }
+
+  .encabezado__titulo {
+    background-color: rgba(255, 255, 255, 80%);
+    display: none;
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    /*bottom: 50px;*/
+  }
+
+  .encabezado__titulo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /*display: inline-block;*/
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    /*bottom: 50px;*/
+  }
+
+  .encabezado__titulo a {
+    line-height: 50px;
   }
 
   .encabezado__menu {
@@ -370,5 +461,14 @@ a:hover {
     display: block;
     text-decoration: none;
     color: white;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
