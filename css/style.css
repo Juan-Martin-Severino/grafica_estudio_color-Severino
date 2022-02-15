@@ -8,6 +8,11 @@
 .contenedor {
   width: 100%;
   /*max-width: 1200px;*/
+  background-image: linear-gradient(
+    #93559e,
+    #00776b
+  ); /*SE AGREGA GRADIENTE AL PROYECTO*/
+
   margin: auto;
   display: grid;
   grid-gap: 0px;
@@ -27,9 +32,9 @@ body {
 /*
 header {
   /*background-position-y: -750px;*/
-  /*width: 1280px;*/
-  /*height: 204px;*/
-  /*overflow: hidden;
+/*width: 1280px;*/
+/*height: 204px;*/
+/*overflow: hidden;
   padding: 0;
 }*/
 
@@ -38,14 +43,17 @@ header {
   grid-area: encabezado;
   /*justify-content: center;*/
   align-content: space-between;
-  background-image: url(../assets/img/frente\ local.jpg);
+
+  /*background-color: #93559e;*/
+
+  /* background-image: url(../assets/img/frente\ local.jpg);
   background-size: auto;
   background-repeat: repeat;
   background-position: center;
-  background-position-y: -750px;
+  background-position-y: -750px;*/
   height: 100%;
   margin: 0;
-  background-color: rgba(255, 255, 255, 50%);
+  /*background-color: rgba(255, 255, 255, 50%);*/
   overflow: hidden;
 }
 
@@ -119,6 +127,8 @@ header {
   text-transform: uppercase;
   border-radius: 5px;
   border: solid 1px white;
+
+  transform: scale(1.1, 1.1); /*SE AGREGA TRANSFORMACION A LOS LI DEL MENU*/
 }
 
 .encabezado__menu {
@@ -129,7 +139,7 @@ header {
 
 .contenedor .contenido {
   grid-area: contenido;
-  background-color: #93559e;
+  /*background-color: #93559e;*/
   /*width: 1280px;*/
   min-height: 500px;
   height: auto;
@@ -188,7 +198,7 @@ header {
 .contenedor .lateral {
   grid-area: lateral;
   width: 100%;
-  background-color: #93559e;
+  /*background-color: #93559e;*/
   padding-top: 50px;
   justify-content: center;
   height: auto;
