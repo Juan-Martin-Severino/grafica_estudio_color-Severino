@@ -177,7 +177,6 @@ body {
 
 .contenedor .pie {
   grid-area: pie;
-  background-color: #00776b;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -196,18 +195,19 @@ body {
 }
 
 .pie__links h3 {
+  font-size: 1rem;
   margin: 10px;
   padding: 0px 5px 0 5px;
   border-left: solid black 2px;
   border-right: solid black 2px;
 }
 
-.pie__mr {
+.pie__mr p,
+.pie__mail p {
+  font-size: 1rem;
+  color: black;
   margin: 10px;
-}
-
-.pie__mail {
-  margin: 10px;
+  align-content: center;
 }
 
 a {
@@ -231,7 +231,6 @@ a:hover {
 
 @media screen and (max-width: 992px) {
   .contenedor {
-    margin: 10px auto;
     display: grid;
     grid-gap: 0;
     grid-template-columns: 1fr 1fr;
@@ -249,8 +248,8 @@ a:hover {
 
   .contenedor .pie {
     grid-area: pie;
-    background-color: #00776b;
     height: 100%;
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -266,6 +265,7 @@ a:hover {
 
   .pie__links {
     grid-area: pie__links;
+    justify-content: end;
   }
 
   .pie__links h3 {
@@ -279,6 +279,14 @@ a:hover {
 
   .pie__mail {
     grid-area: pie__mail;
+  }
+
+  .pie__mr p,
+  .pie__mail p {
+    font-size: 0.8rem;
+    color: black;
+    margin: auto;
+    align-content: center;
   }
 
   a {
@@ -303,11 +311,9 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .contenedor {
-    margin: 10px auto;
     display: grid;
     grid-gap: 0;
     grid-template-columns: 1fr;
-
     grid-template-areas:
       "encabezado"
       "contenido "
@@ -360,8 +366,8 @@ a:hover {
 
   .contenedor .pie {
     grid-area: pie;
-    background-color: #00776b;
     height: 100%;
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -377,6 +383,7 @@ a:hover {
   .pie__links h3 {
     border-left: solid black 2px;
     border-right: solid black 2px;
+    font-size: 0.8rem;
   }
 
   .pie__mr {
@@ -385,6 +392,14 @@ a:hover {
 
   .pie__mail {
     grid-area: pie__mail;
+  }
+
+  .pie__mr p,
+  .pie__mail p {
+    font-size: 0.8rem;
+    color: black;
+    margin: auto;
+    align-content: center;
   }
 
   a {
