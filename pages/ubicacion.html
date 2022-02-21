@@ -26,16 +26,18 @@
         <!-- AGREGAMOS UNA NAVBAR DE BOOTSTRAP Y LA PERSONALIZAMOS -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-              <img
-                src="../assets/img/logo.png"
-                alt=""
-                width="50px"
-                height="45px"
-              />
-            </a>
-            <a class="navbar-brand" href="../index.html">Estudio Color</a>
+          <div class="container-fluid justify-content-between">
+            <div class="d-inline-flex align-items-center">
+              <a class="navbar-brand" href="../index.html">
+                <img
+                  src="../assets/img/logo.png"
+                  alt=""
+                  width="50px"
+                  height="45px"
+                />
+              </a>
+              <a class="navbar-brand" href="../index.html">Estudio Color</a>
+            </div>
             <button
               class="navbar-toggler"
               type="button"
@@ -49,48 +51,50 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 encabezado__nav">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../index.html"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../pages/productos.html"
-                    >Productos</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../pages/servicios.html"
-                    >Servicios</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../pages/ubicacion.html"
-                    >Ubicacion</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../pages/contacto.html"
-                    >Contacto</a
-                  >
-                </li>
-              </ul>
+              <div class="encabezado__nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 encabezado__nav__ul">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../index.html"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../pages/productos.html"
+                      >Productos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../pages/servicios.html"
+                      >Servicios</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../pages/ubicacion.html"
+                      >Ubicacion</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../pages/contacto.html"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
@@ -118,7 +122,9 @@
         />
       </aside>
       <footer class="pie">
-        <p class="pie__mr">© 2022 Estudio Color</p>
+        <div class="pie__mr">
+          <p>© 2022 Estudio Color</p>
+        </div>
         <div class="pie__links">
           <h3>
             <a
@@ -137,7 +143,9 @@
             >
           </h3>
         </div>
-        <p class="pie__mail">email - holaestudiocolor@gmail.com</p>
+        <div class="pie__mail">
+          <p>email - holaestudiocolor@gmail.com</p>
+        </div>
       </footer>
     </div>
 
