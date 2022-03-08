@@ -1,15 +1,38 @@
+@charset "UTF-8";
+/*Declaracion de Mixin sin parámetro*/
 /*IMPLEMENTACION DE PARCIALES*/
 /*USO DE VARIABLES*/
 /*VARIABLES GLOBALES*/
-/* PERSONALIZAMOS LA NAVBAR DE BOOTSTRAP*/
+/*Generación de mapa, el mismo se aplica en todas las partes donde se utilizan colores*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.contenedor {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#93559e), to(#00776b));
+  background-image: linear-gradient(#93559e, #00776b);
+  /*SE AGREGA GRADIENTE AL PROYECTO*/
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "encabezado encabezado encabezado" "contenido contenido lateral" "contenido contenido lateral" "pie pie pie ";
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* PERSONALIZAMOS LA NAVBAR DE BOOTSTRAP*/
 #navbarSupportedContent {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
 
-.contenedor .encabezado {
+.encabezado {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
@@ -22,6 +45,8 @@
   margin: 0;
   overflow: hidden;
   border: solid 1px black;
+  /*Utilización de map-get*/
+  /*Implementacion de mixin*/
   /*ANIMACION DE APARECER*/
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -40,6 +65,7 @@
   -webkit-transition: all 500ms;
   transition: all 500ms;
   /*SE AGREGA TRANSICION A LA TRANSFORMACION DE LOS LI DEL MENU*/
+  /*Implementacion de mixin*/
   /*ANIMACION DE APARECER*/
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -89,28 +115,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .encabezado__titulo {
-    background-color: #ffffffcc;
-    display: none;
-    width: 100%;
-    height: 50%;
-    font-size: 30px;
-    text-align: center;
-    padding: 2px;
-    border-radius: 10px;
-  }
-  .encabezado__titulo:hover {
-    background-color: #000000cc;
-    width: 100%;
-    height: 50%;
-    font-size: 30px;
-    text-align: center;
-    padding: 2px;
-    border-radius: 10px;
-  }
-  .encabezado__titulo a {
-    line-height: 50px;
-  }
   .encabezado__menu {
     list-style: none;
     display: -webkit-box;
@@ -141,233 +145,7 @@
   }
 }
 
-.contenedor .pie {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: pie;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top: solid 1px black;
-  /*ANIMACION DE APARECER*/
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: aparecer;
-          animation-name: aparecer;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.pie__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.pie__links h3 {
-  font-size: 1rem;
-  margin: 10px;
-  padding: 0px 5px 0 5px;
-  border-left: solid black 2px;
-  border-right: solid black 2px;
-}
-
-.pie__mr p,
-.pie__mail p {
-  font-size: 1rem;
-  color: black;
-  margin: 10px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-a {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  line-height: 25px;
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  text-decoration: none;
-  color: white;
-}
-
-@media screen and (max-width: 992px) {
-  .contenedor .pie {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: pie;
-    height: 100%;
-    padding: 10px;
-    display: -ms-grid;
-    display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: "pie__mail pie__mail pie__links" "pie__mr pie__mr pie__links";
-  }
-  .lateral iframe {
-    width: auto;
-    height: auto;
-  }
-  .pie__links {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 3;
-    grid-area: pie__links;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .pie__links h3 {
-    border-left: solid black 2px;
-    border-right: solid black 2px;
-  }
-  .pie__mr {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: pie__mr;
-  }
-  .pie__mail {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: pie__mail;
-  }
-  .pie__mr p,
-  .pie__mail p {
-    font-size: 0.8rem;
-    color: black;
-    margin: auto;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: white;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .contenedor .pie {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: pie;
-    height: 100%;
-    padding: 10px;
-    display: -ms-grid;
-    display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: "pie__mail pie__mail pie__links" "pie__mr pie__mr pie__links";
-  }
-  .pie__links {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 3;
-    grid-area: pie__links;
-  }
-  .pie__links h3 {
-    border-left: solid black 2px;
-    border-right: solid black 2px;
-    font-size: 0.8rem;
-  }
-  .pie__mr {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: pie__mr;
-  }
-  .pie__mail {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: pie__mail;
-  }
-  .pie__mr p,
-  .pie__mail p {
-    font-size: 0.8rem;
-    color: black;
-    margin: auto;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: white;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.contenedor {
-  width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#93559e), to(#00776b));
-  background-image: linear-gradient(#93559e, #00776b);
-  /*SE AGREGA GRADIENTE AL PROYECTO*/
-  margin: auto;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 0px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas: "encabezado encabezado encabezado" "contenido contenido lateral" "contenido contenido lateral" "pie      pie        pie ";
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-.contenedor .contenido {
+.contenido {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -379,6 +157,7 @@ body {
   display: inline-block;
   position: relative;
   padding-bottom: 50px;
+  /*Implementacion de mixin*/
   /*ANIMACION DE APARECER*/
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -434,7 +213,7 @@ body {
   display: inline-block;
 }
 
-.contenedor .lateral {
+.lateral {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
@@ -448,6 +227,7 @@ body {
   display: -ms-grid;
   display: grid;
   min-height: 100px;
+  /*Implementacion de mixin*/
   /*ANIMACION DE APARECER*/
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -469,6 +249,7 @@ body {
   width: 400px;
   text-align: justify;
   border: solid 4px black;
+  /*Utilización de map-get*/
   border-style: double;
   padding: 15px;
 }
@@ -480,7 +261,7 @@ body {
     grid-gap: 0;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "encabezado encabezado" "contenido contenido " "lateral lateral" "pie      pie";
+        grid-template-areas: "encabezado encabezado" "contenido contenido " "lateral lateral" "pie pie";
   }
   .lateral iframe {
     width: auto;
@@ -540,6 +321,232 @@ body {
     text-decoration: none;
     color: white;
   }
+}
+
+.pie {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: pie;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: solid 1px black;
+  /*Utilización de map-get*/
+  /*Implementacion de mixin*/
+  /*ANIMACION DE APARECER*/
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.pie__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pie__links h3 {
+  font-size: 1rem;
+  margin: 10px;
+  padding: 0px 5px 0 5px;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+}
+
+.pie__mr,
+.pie__mail,
+.pie__mail--marder {
+  font-size: 1rem;
+  color: black;
+  margin-left: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/*clase extend*/
+.pie__mail--marder {
+  margin-right: 10px;
+}
+
+.pie__mr p,
+.pie__mail p,
+.pie__mail--marder p {
+  margin: auto;
+}
+
+a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  line-height: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .pie {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: pie;
+    height: 100%;
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "pie__mail pie__mail pie__links" "pie__mr pie__mr pie__links";
+  }
+  .pie__links {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: pie__links;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .pie__links h3 {
+    border-left: solid black 2px;
+    border-right: solid black 2px;
+  }
+  .pie__mr {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: pie__mr;
+  }
+  
+  .pie__mail,
+  .pie__mail--marder {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: pie__mail;
+  }
+  .pie__mr p,
+  .pie__mail p,
+  .pie__mail--marder p {
+    font-size: 0.8rem;
+    color: black;
+    margin: auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    line-height: 25px;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pie {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: pie;
+    height: 100%;
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "pie__mail pie__mail pie__links" "pie__mr pie__mr pie__links";
+  }
+  .pie__links {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: pie__links;
+  }
+  .pie__links h3 {
+    border-left: solid black 2px;
+    border-right: solid black 2px;
+    font-size: 0.8rem;
+  }
+  .pie__mr {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: pie__mr;
+  }
+  
+  .pie__mail,
+  .pie__mail--marder {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: pie__mail;
+  }
+  .pie__mr p,
+  .pie__mail p,
+  .pie__mail--marder p {
+    font-size: 0.8rem;
+    color: black;
+    margin: auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    line-height: 25px;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 @-webkit-keyframes aparecer {

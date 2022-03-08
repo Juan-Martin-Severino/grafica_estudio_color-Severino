@@ -1,16 +1,14 @@
-.contenedor .pie {
+.pie {
   grid-area: pie;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: solid 1px $c-negro;
+  border-top: solid 1px map-get($color, negro); /*Utilización de map-get*/
 
-  /*ANIMACION DE APARECER*/
+  /*Implementacion de mixin*/
 
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: initial;
+  @include animacion;
 }
 
 .pie__links {
@@ -20,17 +18,28 @@
     font-size: 1rem;
     margin: 10px;
     padding: 0px 5px 0 5px;
-    border-left: solid $c-negro 2px;
-    border-right: solid $c-negro 2px;
+    border-left: solid map-get($color, negro) 2px;
+    border-right: solid map-get($color, negro) 2px;
   }
+}
+
+.pie__mr,
+.pie__mail {
+  font-size: 1rem;
+  color: map-get($color, negro);
+  margin-left: 10px;
+  align-content: center;
+}
+
+/*clase extend*/
+.pie__mail--marder {
+  @extend .pie__mail;
+  margin-right: 10px;
 }
 
 .pie__mr p,
 .pie__mail p {
-  font-size: 1rem;
-  color: $c-negro;
-  margin: 10px;
-  align-content: center;
+  margin: auto;
 }
 
 a {
@@ -40,7 +49,7 @@ a {
   display: block;
   line-height: 25px;
   text-decoration: none;
-  color: $c-negro;
+  color: map-get($color, negro);
 }
 
 a:hover {
@@ -49,11 +58,11 @@ a:hover {
   position: relative;
   display: block;
   text-decoration: none;
-  color: $c-blanco;
+  color: map-get($color, blanco);
 }
 
 @media screen and (max-width: 992px) {
-  .contenedor .pie {
+  .pie {
     grid-area: pie;
     height: 100%;
     padding: 10px;
@@ -70,8 +79,8 @@ a:hover {
     justify-content: end;
 
     h3 {
-      border-left: solid black 2px;
-      border-right: solid black 2px;
+      border-left: solid map-get($color, negro) 2px;
+      border-right: solid map-get($color, negro) 2px;
     }
   }
 
@@ -86,7 +95,7 @@ a:hover {
   .pie__mr p,
   .pie__mail p {
     font-size: 0.8rem;
-    color: black;
+    color: map-get($color, negro);
     margin: auto;
     align-content: center;
   }
@@ -98,7 +107,7 @@ a:hover {
     display: block;
     line-height: 25px;
     text-decoration: none;
-    color: black;
+    color: map-get($color, negro);
   }
 
   a:hover {
@@ -107,12 +116,12 @@ a:hover {
     position: relative;
     display: block;
     text-decoration: none;
-    color: white;
+    color: map-get($color, blanco);
   }
 }
 
 @media screen and (max-width: 480px) {
-  .contenedor .pie {
+  .pie {
     grid-area: pie;
     height: 100%;
     padding: 10px;
@@ -128,8 +137,8 @@ a:hover {
     grid-area: pie__links;
 
     h3 {
-      border-left: solid black 2px;
-      border-right: solid black 2px;
+      border-left: solid map-get($color, negro) 2px;
+      border-right: solid map-get($color, negro) 2px;
       font-size: 0.8rem;
     }
   }
@@ -145,7 +154,7 @@ a:hover {
   .pie__mr p,
   .pie__mail p {
     font-size: 0.8rem;
-    color: black;
+    color: map-get($color, negro);
     margin: auto;
     align-content: center;
   }
@@ -157,7 +166,7 @@ a:hover {
     display: block;
     line-height: 25px;
     text-decoration: none;
-    color: black;
+    color: map-get($color, negro);
   }
 
   a:hover {
@@ -166,6 +175,6 @@ a:hover {
     position: relative;
     display: block;
     text-decoration: none;
-    color: white;
+    color: map-get($color, blanco);
   }
 }

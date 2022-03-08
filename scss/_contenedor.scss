@@ -1,0 +1,23 @@
+.contenedor {
+  width: 100%;
+  background-image: linear-gradient(
+    map-get($color, violeta),
+    /*Utilización de map-get*/ map-get($color, verde) /*Utilización de map-get*/
+  ); /*SE AGREGA GRADIENTE AL PROYECTO*/
+
+  margin: auto;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "encabezado encabezado encabezado"
+    "contenido contenido lateral"
+    "contenido contenido lateral"
+    "pie pie pie ";
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}

@@ -4,7 +4,7 @@
   justify-content: end;
 }
 
-.contenedor .encabezado {
+.encabezado {
   display: grid;
   grid-area: encabezado;
   align-content: space-between;
@@ -12,42 +12,38 @@
   margin: 0;
   overflow: hidden;
 
-  border: solid 1px $c-negro;
+  border: solid 1px map-get($color, negro); /*Utilización de map-get*/
 
-  /*ANIMACION DE APARECER*/
+  /*Implementacion de mixin*/
 
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: initial;
+  @include animacion;
 }
 
 .encabezado__nav__ul li {
   margin: 5px;
   text-transform: uppercase;
-  border-left: solid 1px $c-negro;
-  border-right: solid 1px $c-negro-op;
-  background-color: $c-blanco-op;
+  border-left: solid 1px map-get($color, negro);
+  border-right: solid 1px map-get($color, negro-op);
+  background-color: map-get($color, blanco-op);
   transition: all 500ms; /*SE AGREGA TRANSICION A LA TRANSFORMACION DE LOS LI DEL MENU*/
 
-  /*ANIMACION DE APARECER*/
+  /*Implementacion de mixin*/
 
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: initial;
+  @include animacion;
 
   &:hover {
     /* COMBINACION DE & Y NESTING(ANIDACION) */
     text-transform: uppercase;
-    color: $c-blanco !important;
-    border-right: solid 1px $c-negro;
-    border-left: solid 1px $c-negro-op;
-    background-color: $c-negro-op2;
+    color: map-get($color, blanco) !important;
+    border-right: solid 1px map-get($color, negro);
+    border-left: solid 1px map-get($color, negro-op);
+    background-color: map-get($color, negro-op2);
 
     transform: scale(1.05, 1.05); /*SE AGREGA TRANSFORMACION A LOS LI DEL MENU*/
   }
 
   a:hover {
-    color: $c-blanco-op2 !important;
+    color: map-get($color, blanco-op2) !important;
   }
 }
 
@@ -63,7 +59,7 @@
     display: block;
     line-height: 25px;
     text-decoration: none;
-    color: $c-negro;
+    color: map-get($color, negro);
   }
 
   a:hover {
@@ -72,7 +68,7 @@
     position: relative;
     display: block;
     text-decoration: none;
-    color: $c-blanco;
+    color: map-get($color, blanco);
   }
 }
 
@@ -91,7 +87,7 @@
     display: block;
     line-height: 25px;
     text-decoration: none;
-    color: $c-negro;
+    color: map-get($color, negro);
   }
 
   a:hover {
@@ -100,6 +96,6 @@
     position: relative;
     display: block;
     text-decoration: none;
-    color: $c-blanco;
+    color: map-get($color, blanco);
   }
 }
