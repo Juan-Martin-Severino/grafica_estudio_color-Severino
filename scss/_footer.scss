@@ -1,5 +1,6 @@
 .pie {
   grid-area: pie;
+  background-color: map-get($color, negro-op2);
   height: 50px;
   display: flex;
   justify-content: space-between;

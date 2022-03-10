@@ -11,7 +11,7 @@
   height: 100%;
   margin: 0;
   overflow: hidden;
-
+  background-color: map-get($color, negro-op2);
   border: solid 1px map-get($color, negro); /*Utilización de map-get*/
 
   /*Implementacion de mixin*/
@@ -37,7 +37,7 @@
     color: map-get($color, blanco) !important;
     border-right: solid 1px map-get($color, negro);
     border-left: solid 1px map-get($color, negro-op);
-    background-color: map-get($color, negro-op2);
+    background-color: map-get($color, violeta);
 
     transform: scale(1.05, 1.05); /*SE AGREGA TRANSFORMACION A LOS LI DEL MENU*/
   }

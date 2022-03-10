@@ -1,10 +1,6 @@
 .contenedor {
   width: 100%;
-  background-image: linear-gradient(
-    map-get($color, violeta),
-    /*Utilización de map-get*/ map-get($color, verde) /*Utilización de map-get*/
-  ); /*SE AGREGA GRADIENTE AL PROYECTO*/
-
+  background-color: map-get($color, verde);
   margin: auto;
   display: grid;
   grid-gap: 0px;
@@ -13,8 +9,8 @@
 
   grid-template-areas:
     "encabezado encabezado encabezado"
-    "contenido contenido lateral"
-    "contenido contenido lateral"
+    "contenido contenido contenido"
+    "lateral lateral lateral"
     "pie pie pie ";
 }
 

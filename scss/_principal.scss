@@ -3,9 +3,11 @@
   min-height: 500px;
   height: auto;
   overflow: hidden;
-  display: inline-block;
-  position: relative;
-  padding-bottom: 50px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 1%;
 
   /*Implementacion de mixin*/
 
@@ -13,18 +15,15 @@
 }
 
 .principal__seccion {
-  width: 80%;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  top: 25px;
-  left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .principal__seccion__servicios {
   width: 100%;
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
   overflow: hidden;
 }
 
@@ -32,17 +31,17 @@
   font-size: 25px;
   text-align: justify;
   padding: 10px;
+  align-content: center;
 }
 
 .principal__seccion img {
-  margin-left: 50px;
+  margin: 1%;
 }
 
 .principal__seccion__servicios__imagen {
-  width: 400px;
+  align-items: center;
   display: inline-block;
-  margin-top: 50px;
-  margin-left: 150px;
+  margin: 10%;
 
   h2 {
     text-transform: uppercase;
@@ -56,12 +55,18 @@
     height: 100%;
     display: inline-block;
   }
+
+  p {
+    text-align: justify;
+    align-content: center;
+    margin: 10px;
+  }
 }
 
 .lateral {
   grid-area: lateral;
   width: 100%;
-  padding-top: 50px;
+  margin: 1%;
   justify-content: center;
   height: auto;
   display: grid;
@@ -80,9 +85,12 @@
 }
 
 /*Estilos para el formulario*/
+
 .principal__seccion fieldset {
-  width: 400px;
-  text-align: justify;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
   border: solid 4px map-get($color, negro); /*Utilización de map-get*/
   border-style: double;
   padding: 15px;
@@ -141,7 +149,6 @@
   .principal__seccion img {
     width: 100%;
     height: 100%;
-    margin-left: 50px;
   }
 
   .lateral iframe {
