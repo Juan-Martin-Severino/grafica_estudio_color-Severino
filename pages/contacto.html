@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="gráfica, diseño, imprenta, ploteo, impresiones, vinilos, etiquetas, plotter, impresora, recortes, anillados, design, graphic, print, gigantografías, fotos, foto, pic, picture, polaroid, oeste, argentina, castelar, buenos aires">
-    <meta name="description" content="Contacto para poder realizar consultas y/o pedidos a Estudio Color" />
+    <meta
+      name="keywords"
+      content="mail, email, telefono, redes sociales, consulta, pregunta, oeste, argentina, castelar, buenos aires"
+    />
+    <meta
+      name="description"
+      content="Contacto para poder realizar consultas y/o pedidos a Estudio Color"
+    />
     <title>Contacto y consultas de gráfica e imprenta</title>
-    <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo.png"
+      type="image/x-icon"
+    />
 
     <!-- BOOTSTRAP CSS only -->
 
@@ -23,8 +33,8 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header class="encabezado">
+    <header class="encabezado">
+      <div class="container">
         <!-- AGREGAMOS UNA NAVBAR DE BOOTSTRAP Y LA PERSONALIZAMOS -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg">
@@ -34,11 +44,13 @@
                 <img
                   src="../assets/img/logo.png"
                   alt=""
-                  width="50px"
-                  height="45px"
+                  width="75px"
+                  height="68px"
                 />
               </a>
-              <h1><a class="navbar-brand" href="../index.html">Estudio Color</a></h1>
+              <span>
+                <a class="navbar-brand" href="../index.html">Estudio Color</a>
+              </span>
             </div>
             <button
               class="navbar-toggler"
@@ -100,73 +112,91 @@
             </div>
           </div>
         </nav>
-      </header>
-      <main class="contenido">
-        <section class="principal__seccion">
-          <form action="">
-            <fieldset>
-              <legend>Contacto</legend>
-              <label for="nombre">Nombre:</label>
-              <input
-                type="text"
-                placeholder="Ingrese su nombre"
-                name="nombre"
-              /><br /><br />
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                placeholder="ingresatuemail@gmail.com"
-                name="email"
-              /><br /><br />
-              <label for="telefono">Telefono:</label>
-              <input
-                type="tel"
-                placeholder="(+54) 11 5522 6688"
-                name="telefono"
-                id=""
-              /><br /><br />
-              <label for="consulta">Consulta:</label><br /><br />
-              <textarea
-                name="consulta"
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Por favor ingrese su consulta"
-              ></textarea
-              ><br /><br />
-              <input type="submit" value="Enviar" />
-              <input type="reset" value="Borrar" />
-            </fieldset>
-          </form>
-        </section>
-      </main>
-      <footer class="pie">
+      </div>
+    </header>
+    <div class="principal">
+      <div class="container">
+        <div class="row principal__primero__c">
+          <section class="col-12">
+            <h1>¡Hola!</h1>
+            <h2>¡Dejanos tu consulta!</h2>
+            <p>
+              Para cualquier consulta que desees hacer por favor completá todos
+              los datos solicitados a continuación, junto con la consulta
+              pertinente. ¡Recordá que también podés contactarnos a través de
+              nuestro email o nuestras redes sociales! Las mismas se encuentran
+              en el pie de página.
+            </p>
+          </section>
+
+          <section class="col-12 principal__primero__c__contacto">
+            <form action="">
+              <fieldset>
+                <legend>Contacto</legend>
+                <label for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  placeholder="Ingrese su nombre"
+                  name="nombre"
+                />
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  placeholder="ingresatuemail@gmail.com"
+                  name="email"
+                />
+                <label for="telefono">Telefono:</label>
+                <input
+                  type="tel"
+                  placeholder="(+54) 11 5522 6688"
+                  name="telefono"
+                  id=""
+                />
+                <label for="consulta">Consulta:</label>
+                <textarea
+                  name="consulta"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Por favor ingrese su consulta"
+                ></textarea>
+                <button clastype="submit" value="Enviar">Enviar</button>
+                <button type="reset" value="Borrar">Borrar</button>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="pie">
+      <div class="container pie_container">
         <div class="pie__mr">
           <p>© 2022 Estudio Color</p>
         </div>
         <div class="pie__links">
-          <h3>
+          <h5>
             <a
               href="https://es-la.facebook.com/EstudioColorCastelar/"
               target="_blank"
               rel="link a facebook"
               >Facebook</a
             >
-          </h3>
-          <h3>
+          </h5>
+          <h5>
             <a
               href="https://www.instagram.com/estudiocolor/?hl=es"
               target="_blank"
               rel="link a instagram"
               >Instagram</a
             >
-          </h3>
+          </h5>
         </div>
-        <div class="pie__mail--marder"> <!--utilizacion de extend -->
+        <div class="pie__mail--marder">
+          <!--utilizacion de extend -->
           <p>email - holaestudiocolor@gmail.com</p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script

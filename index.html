@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="gráfica, diseño, imprenta, ploteo, impresiones, vinilos, etiquetas, plotter, impresora, recortes, anillados, design, graphic, print, gigantografías, fotos, foto, pic, picture, polaroid, oeste, argentina, castelar, buenos aires">
-    <meta name="description" content="Estudio Color es una gráfica e imprenta que ofrece múltiples productos y servicios. Se encuentre ubicada en Castelar, Zona Oeste, Argentina" />
+    <meta
+      name="keywords"
+      content="gráfica, diseño, imprenta, ploteo, impresiones, vinilos, etiquetas, plotter, impresora, recortes, anillados, design, graphic, print, gigantografías, fotos, foto, pic, picture, polaroid, oeste, argentina, castelar, buenos aires"
+    />
+    <meta
+      name="description"
+      content="Estudio Color es una gráfica e imprenta que ofrece múltiples productos y servicios. Se encuentre ubicada en Castelar, Zona Oeste, Argentina"
+    />
     <title>Estudio Color - Gráfica e Imprenta de zona oeste</title>
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
 
@@ -23,8 +29,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header class="encabezado">
+    <header class="encabezado">
+      <div class="container">
         <!-- AGREGAMOS UNA NAVBAR DE BOOTSTRAP Y LA PERSONALIZAMOS -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg">
@@ -34,11 +40,13 @@
                 <img
                   src="assets/img/logo.png"
                   alt=""
-                  width="50px"
-                  height="45px"
+                  width="75px"
+                  height="68px"
                 />
               </a>
-              <h1><a class="navbar-brand" href="index.html">Estudio Color</a></h1>
+              <span>
+                <a class="navbar-brand" href="index.html">Estudio Color</a>
+              </span>
             </div>
             <button
               class="navbar-toggler"
@@ -100,66 +108,132 @@
             </div>
           </div>
         </nav>
-      </header>
-      <main class="contenido">
-        <section class="principal__seccion">
-          <p class="principal___seccion__texto">
-            Somos un gráfica con más de 12 años en el rubro.
-            Ofrecemos servicios de impresión, ploteo y diseño entre otros
-            Estamos en proyecto de expansión y queremos abarcar el campo
-            multimedia en los próximos años.
-          </p>
-          <img
-            src="assets/img/menus.jpg"
-            alt="foto menu"
-        
-          />
-          <img
-            src="assets/img/boletines.jpg"
-            alt="foto boletines"
-          />
-        </section>
-      </main>
-      <aside class="lateral">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/nqW8d46k-pc"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      </div>
+    </header>
+    <div class="principal">
+      <div class="container">
+        <div class="row principal__primero">
+          <section class="col-sm-12 col-md-6 col-lg-6">
+            <h1>¡Estudio Color!</h1>
+            <h2>¡Somos tu gráfica amiga y de confianza!</h2>
+            <p>
+              Somos un gráfica con más de 12 años en el rubro. Ofrecemos
+              servicios de impresión, ploteo y diseño entre otros Estamos en
+              proyecto de expansión y queremos abarcar el campo multimedia en
+              los próximos años.
+            </p>
+          </section>
 
-        <p>Este es nuestro Reel en YouTube!</p>
-      </aside>
-      <footer class="pie">
+          <aside class="col-sm-12 col-md-6 col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/nqW8d46k-pc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <p>Este es nuestro Reel en YouTube!</p>
+          </aside>
+        </div>
+        <div class="row principal__segundo">
+          <section class="col-12">
+            <h3>¡Algunos de nuestros productos y servicios!</h3>
+          </section>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/menus.jpg"
+              class="card-img-top"
+              alt="foto menu"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Menú Personalizado</h4>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/fotos polaroid.jpg"
+              class="card-img-top"
+              alt="foto polaroid"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Fotos Polaroid</h4>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/logo fulanos motiongraphics.jpg"
+              class="card-img-top"
+              alt="logo motiongraphics"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Motiongraphics</h4>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/polyfan.jpg"
+              class="card-img-top"
+              alt="foto figura polyfan"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Figuras en Polyfan</h4>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/tresmusica.jpg"
+              class="card-img-top"
+              alt="foto de logotipo 3 musica"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Rediseño de Logo</h4>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="assets/img/tarjetaspapa.jpg"
+              class="card-img-top"
+              alt="foto de tarjetas dia del padre"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Tarjeta Día del Padre</h4>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer class="pie">
+      <div class="container pie_container">
         <div class="pie__mr">
           <p>© 2022 Estudio Color</p>
         </div>
         <div class="pie__links">
-          <h3>
+          <h5>
             <a
               href="https://es-la.facebook.com/EstudioColorCastelar/"
               target="_blank"
               rel="link a facebook"
               >Facebook</a
             >
-          </h3>
-          <h3>
+          </h5>
+          <h5>
             <a
               href="https://www.instagram.com/estudiocolor/?hl=es"
               target="_blank"
               rel="link a instagram"
               >Instagram</a
             >
-          </h3>
+          </h5>
         </div>
-        <div class="pie__mail--marder"> <!--utilizacion de extend -->
+        <div class="pie__mail--marder">
+          <!--utilizacion de extend -->
           <p>email - holaestudiocolor@gmail.com</p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script

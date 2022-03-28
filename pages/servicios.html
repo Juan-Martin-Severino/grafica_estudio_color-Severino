@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="gráfica, diseño, imprenta, ploteo, impresiones, vinilos, etiquetas, plotter, impresora, recortes, anillados, design, graphic, print, gigantografías, fotos, foto, pic, picture, polaroid, oeste, argentina, castelar, buenos aires"
+      content="diseño, imprenta, ploteo, impresiones, recortes, anillados, design, graphic, print"
     />
     <meta
       name="description"
@@ -33,8 +33,8 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header class="encabezado">
+    <header class="encabezado">
+      <div class="container">
         <!-- AGREGAMOS UNA NAVBAR DE BOOTSTRAP Y LA PERSONALIZAMOS -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg">
@@ -44,13 +44,13 @@
                 <img
                   src="../assets/img/logo.png"
                   alt=""
-                  width="50px"
-                  height="45px"
+                  width="75px"
+                  height="68px"
                 />
               </a>
-              <h1>
+              <span>
                 <a class="navbar-brand" href="../index.html">Estudio Color</a>
-              </h1>
+              </span>
             </div>
             <button
               class="navbar-toggler"
@@ -112,58 +112,171 @@
             </div>
           </div>
         </nav>
-      </header>
-      <main class="contenido">
-        <section class="principal__seccion__servicios col-12">
-          <div class="row">
-            <div class="col-sm-12 col-lg-6">
-              <div class="principal__seccion__servicios__imagen">
-                <h2>Menus personalizados</h2>
-                <img src="../assets/img/menus.jpg" alt="foto de menu" />
-                <p>
-                  Menus super prácticos para tu bar o casa de comidas!
-                  Plastificados con más resistencia.
-                </p>
-              </div>
+      </div>
+    </header>
+    <div class="principal">
+      <div class="container">
+        <div class="row principal__primero">
+          <section class="col-sm-12 col-md-6 col-lg-6">
+            <h1>¡Servicios a tu medida!</h1>
+            <h2>
+              ¡Diseños, recortes, impresiones, anillados, ediciones y mucho más!
+            </h2>
+            <p>
+              En Estudio Color te ofrecemos diversos servicios, desde diseños
+              para tus redes sociales, productos digitales o impresos hasta
+              impresiones, recortes y anillados. Queremos contarte que empezamos
+              a incursionar en diseños y ediciones de web, video y sonido. De
+              esta forma queremos abrir el abanico de nuestro negocio hacia el
+              campo multimedia.
+            </p>
+          </section>
+
+          <aside class="col-sm-12 col-md-6 col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/XdCxWuAnm_w"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+                > ></iframe
+              >
             </div>
-            <div class="col-sm-12 col-lg-6">
-              <div class="principal__seccion__servicios__imagen">
-                <h2>Figuras en polyfan</h2>
-                <img src="../assets/img/polyfan.jpg" alt="foto de polyfan" />
-                <p>Figuras en polyfan + Imagen montada!</p>
-              </div>
+
+            <p>
+              Te mostramos el equipamiento con el cual cortamos los trabajos de
+              nuestros clientes. La capacidad de poder cortar 450 hojas a la vez
+              nos permite realizar cortes precisos y en cantidad.
+            </p>
+          </aside>
+        </div>
+        <div class="row principal__segundo">
+          <section class="col-12">
+            <h3>¡Nuestros Servicios!</h3>
+          </section>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/tresmusica.jpg"
+              class="card-img-top"
+              alt="foto de logotipo 3 musica"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Rediseño de Logo</h4>
+              <p class="card-test">
+                Rediseñamos tu logo de empresa para que no se quede afuera de
+                las nuevas tendencias, siempre procurando que el cliente quede
+                satisfecho y su logo de marca quede presente en sus clientes.
+              </p>
             </div>
-          </div>
-        </section>
-      </main>
-      <footer class="pie">
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/sitiowebestudio.jpg"
+              class="card-img-top"
+              alt="foto de website de Estudio Color"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Desarrollo de WebSite</h4>
+              <p class="card-test">
+                Nos encargamos del desarrollo del WebSite de tu empresa para que
+                todas las personas sepan quiénes son y como los pueden
+                contactar. WebSite de calidad, funcional y de diseño.
+              </p>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/logo fulanos motiongraphics.jpg"
+              class="card-img-top"
+              alt="logo motiongraphics"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Motiongraphics</h4>
+              <p class="card-test">
+                ¡Le damos vida a tus logos! Animándolos, para que tus reels y
+                propagandas sean más dinámicas y tu marca quede en la memoria de
+                todos.
+              </p>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/naipespersonalizadas.jpg"
+              class="card-img-top"
+              alt="foto naipes personalizadas"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Personalización de Producto</h4>
+              <p class="card-test">
+                Personalizamos tus productos para que al momento de venderlos o
+                tener que utilizarlos, dejen una marca en el público.
+              </p>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/guillotina.jpg"
+              class="card-img-top"
+              alt="foto de una guillotina"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Cortes de precisión</h4>
+              <p class="card-test">
+                Gracias a la ayuda de las mejores máquinas del mercado le damos
+                terminaciones precisas a tus cortes. Pudiendo tener el producto
+                terminado rápidamente y a la perfección.
+              </p>
+            </div>
+          </article>
+          <article class="card col-sm-12 col-md-6 col-lg-4">
+            <img
+              src="../assets/img/tarjetaspersonales.jpg"
+              class="card-img-top"
+              alt="foto de tarjetas personales"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Tarjetas Personales</h4>
+              <p class="card-test">
+                Te damos el toque elegante y profesional que todo emprendedor y
+                persona de negocios tiene que tener. Tarjetas personales de
+                calidad, customizadas en base al cliente y de la mejor calidad.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer class="pie">
+      <div class="container pie_container">
         <div class="pie__mr">
           <p>© 2022 Estudio Color</p>
         </div>
         <div class="pie__links">
-          <h3>
+          <h5>
             <a
               href="https://es-la.facebook.com/EstudioColorCastelar/"
               target="_blank"
               rel="link a facebook"
               >Facebook</a
             >
-          </h3>
-          <h3>
+          </h5>
+          <h5>
             <a
               href="https://www.instagram.com/estudiocolor/?hl=es"
               target="_blank"
               rel="link a instagram"
               >Instagram</a
             >
-          </h3>
+          </h5>
         </div>
         <div class="pie__mail--marder">
           <!--utilizacion de extend -->
           <p>email - holaestudiocolor@gmail.com</p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script
